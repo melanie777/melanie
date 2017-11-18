@@ -14,8 +14,8 @@
   </div>
   <div text-center class="headline">
     <!-- pon tu nombre aqui -->
-    <h2> melanie cruz </h2>
-     <p> estudiante </p>
+    <h2>{{datos.nombre}} </h2>
+     <p> {{datos.ocupacion}}</p>
   </div>
   <!-- lista de datos a partir de aqui -->
   <div>
@@ -27,7 +27,7 @@
           <ion-icon name="flag" item-start></ion-icon>
           <h3>origen</h3>
           <p>
-            lima,peru
+            {{dato2.origen}}
           </p>
 
         </ion-item>
@@ -35,19 +35,19 @@
         <ion-icon name="mail" item-star></ion-icon>
           <h3> email</h3>
          <p>
-           meli_sadey@hotmail.com
+        {{dato2.email}}
          </p>
         </ion-item>
         <ion-item> <!--Basic: auto-select the icon based on the platform -->
           <ion-icon name="phone-portrait"></ion-icon>
          <h3> telefono </h3>
-         <p> 935298170</p>
+         <p> {{dato2.numero}}</p>
         </ion-item>
       </ion-list>
     </ion-slide>
     <ion-slide>
       <p >
-    <strong  > hola soy melanie </strong>
+    <strong  > hola soy melanie tengo {{datos.edad}} años. </strong>
     </p>
     </ion-slide>
     </ion-slides>
