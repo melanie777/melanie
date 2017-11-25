@@ -8,4 +8,15 @@
   <!-- el componente para ingrear un nuevo TODO aqui -->
 
   <!-- la lista de TODOs aqui -->
-</ion-content>
+  <div>
+    <ion-list>
+      <ion-item *ngFor="let component of queaseress">
+        <ion-label>{{component.description}}</ion-label>
+        <ion-checkbox [checked]="component.done"></ion-checkbox>
+
+      </ion-item>
+
+         </ion-list>
+
+           </div>
+             </ion-content>

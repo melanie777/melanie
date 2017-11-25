@@ -15,16 +15,25 @@ export class AboutPage {
     ocupacion: "estudiante",
     edad: 16
   };
-    dato2: any = {
-    origen: "ayacucho peru",
-    numero: "968314292",
-    email: "meli_sadey@hotail.com"
 
+  informacion: any[]= [
+    {
+      titulo: "origen",
+      dato: "lima, Peru",
+      icono: "flag"
+    },
+    {
+     titulo: "telefono",
+     dato: "968314292",
+     icono: "call"
+   },
+    {
+      titulo: "coreo",
+       dato: "meli_sadey@hotail.com",
+       icono: "mail"
+    }
+  ];
 
-
-    
-
-  };
   constructor(public navCtrl: NavController) {
 
   }
