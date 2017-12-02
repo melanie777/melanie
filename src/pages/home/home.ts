@@ -11,7 +11,7 @@ import { TodoService } from '../../shared/todo.service';
 })
 export class HomePage implements OnInit {
 
-  queaseress: Todo[] = [
+  quehaceres: Todo[] = [
     {
       description:"lavar los platos",
       done: true
@@ -30,22 +30,22 @@ export class HomePage implements OnInit {
 }
   ];
 
-  quehacer: todo = {
+  quehacer: Todo = {
    description: "lavar los platos",
    done: true
  };
 
-   quehacer2: todo = {
+   quehacer2: Todo = {
     description: "trapear la sala ",
     done: false
   };
 
-    quehacer3: todo = {
+    quehacer3: Todo = {
      description: "leer",
      done: true
 };
 
-     quehacer4: todo = {
+     quehacer4: Todo = {
       description: "desayunar ",
       done: false
   };
@@ -69,8 +69,22 @@ export class HomePage implements OnInit {
     private todoService: TodoService) {}
 
   ngOnInit() {
+    this.agregarQuehacer("comer",false);
+    this.agregarQuehacer("etudiar",false);
+    this.agregarQuehacer("armar el cubo de rubik",true);
     // codigo al iniciar el componente
   }
+  agregarQuehacer(nuevoQuehacer: string, terminado: boolean){
+    if (nuevoQuehacer !== ""){
+
+
+    this.quehaceres.push({
+      description: nuevoQuehacer,
+      done: terminado
+
+    });
+  }
+}
 
   addTodo(todo: string) {
     // codigo para agregar TODO

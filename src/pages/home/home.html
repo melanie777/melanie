@@ -5,12 +5,20 @@
 </ion-header>
 
 <ion-content>
+  <div>
+  <ion-item>
+   <ion-label floating>nuevo quehacer</ion-label>
+   <ion-input type="text" #quehacerInput></ion-input>
+ </ion-item>
+</div>
+  <div padding>
+  <button ion-button block (click)="agregarQuehacer(quehacerInput.value,false)">agregar</button>
   <!-- el componente para ingrear un nuevo TODO aqui -->
-
+</div>
   <!-- la lista de TODOs aqui -->
   <div>
     <ion-list>
-      <ion-item *ngFor="let component of queaseress">
+      <ion-item *ngFor="let component of quehaceres">
         <ion-label>{{component.description}}</ion-label>
         <ion-checkbox [checked]="component.done"></ion-checkbox>
 
