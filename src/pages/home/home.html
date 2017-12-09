@@ -15,6 +15,16 @@
   <button ion-button block (click)="agregarQuehacer(quehacerInput.value,false)">agregar</button>
   <!-- el componente para ingrear un nuevo TODO aqui -->
 </div>
+<div padding>
+  <button ion-button *ngFor="let boton of botones"
+  color={{boton.color}}
+   large={{boton.grande}}
+  click="filtrarQuehaceres(boton.texto)">{{boton.texto}}</button>
+
+
+</div>
+
+
   <!-- la lista de TODOs aqui -->
   <div>
     <ion-list>
