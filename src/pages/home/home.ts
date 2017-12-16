@@ -94,7 +94,7 @@ export class HomePage implements OnInit {
         return this.quehaceres.filter(quehacer=>quehacer.done);
   }
 }
-  agregarQuehacer(nuevoQuehacer: String, terminado: boolean){
+  agregarQuehacer(nuevoQuehacer: string, terminado: boolean){
     if (nuevoQuehacer !==""){
 
 
