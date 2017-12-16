@@ -19,7 +19,7 @@
   <button ion-button *ngFor="let boton of botones"
   color={{boton.color}}
    large={{boton.grande}}
-  click="filtrarQuehaceres(boton.texto)">{{boton.texto}}</button>
+  (click)="filtrarQuehaceres(boton.texto)">{{boton.texto}}</button>
 
 
 </div>
@@ -28,9 +28,12 @@
   <!-- la lista de TODOs aqui -->
   <div>
     <ion-list>
-      <ion-item *ngFor="let component of quehaceres">
+      <ion-item *ngFor="let component of listarQuehaceres()">
         <ion-label>{{component.description}}</ion-label>
-        <ion-checkbox [checked]="component.done"></ion-checkbox>
+        <ion-checkbox #actualizarCheckdbox
+        [checked]="component.done"
+        (click)="actualizarQuehacer(actualizarCheckdbox.checked,component)">
+      </ion-checkbox>
 
       </ion-item>
 
